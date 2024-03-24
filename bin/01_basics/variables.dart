@@ -1,15 +1,16 @@
-void main(){
+/*void main(){
   final oddNumbers  = [1,3,5];
   final evenNumbers = const [2,4];
 
   oddNumbers.add(7);
-  // evenNumbers.add(6);
+   evenNumbers.add(6);
   print('\noddNumbers:');  print(oddNumbers);
   print('\nevenNumbers:');  print(evenNumbers);
 }
-
+*/
 
 void main_final_constant_vars(){
+//void main(){
   var oddNumbers = [1,3,5,7];
   var evenNumbers = [2,4,6,8,10,12];
   final numbers = oddNumbers;
@@ -28,8 +29,8 @@ class Person {
   int age;
 
   Person(String name, int age)
-      : this.name = name,
-        this.age = age;
+      : name = name,
+        age = age;
 
   void show() {
     print(name);
@@ -37,11 +38,12 @@ class Person {
   }
 }
 
-void main_final_instance_var() {
+//void main_final_instance_var() {
+void main(){
   var p = Person('Ahmad', 20);
   p.show();
 
-  // p.name = 'Abu';
+  //p.name = 'Abu';
   p.age = 21;
   p.show();
 }

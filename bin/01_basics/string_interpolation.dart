@@ -1,5 +1,5 @@
 void main(){
-  var name ='Ali';
+  String name ='Ali';
   var yearOfBirth = 1999;
   var score = 85.0;
 

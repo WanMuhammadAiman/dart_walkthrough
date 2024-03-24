@@ -1,5 +1,5 @@
 class IntegerAddition{
-  int first,second;
+  int first=0,second=0;
 
   IntegerAddition(int f, int s)
   { first = f;
@@ -10,7 +10,7 @@ class IntegerAddition{
 }
 
 class StringAddition{
-  String first,second;
+  String first='',second='';
 
   StringAddition(String f, String s)
   { first = f;

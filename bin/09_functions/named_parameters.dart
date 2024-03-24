@@ -1,6 +1,6 @@
-import 'package:meta/meta.dart';
+//import 'package:meta/meta.dart';
 
-double area( {@required double width, double height=2} ) => width * height;
+double area( {required double width, double height=2} ) => width * height;
 
 void main(){
   print ("Rectangle #1's area is ${area(width:2, height: 3)}");

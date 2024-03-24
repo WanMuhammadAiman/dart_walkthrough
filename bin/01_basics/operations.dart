@@ -7,9 +7,9 @@
 
 // cascade notations
 class Circle {
-  int x, y;
-  int radius;
-  String color;
+  int? x, y;
+  int? radius;
+  late String color;
   void position(x, y) {
     this.x = x;
     this.y = y;
@@ -28,8 +28,8 @@ void main() {
 
   c.display();
 
-  var name='hello';
-  print( name ?? 'guest' );
+  String? name = 'hello';
+  print(name ?? 'guest');
 }
 
 // Not covered in the lecture, thus students need to walkthrough on their own

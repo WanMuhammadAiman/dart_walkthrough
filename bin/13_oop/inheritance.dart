@@ -1,17 +1,17 @@
 import 'dart:math';
 
 abstract class Shape {
-  String color;
+  String? color; // Declaring color parameter as nullable
 
   Shape([this.color]);
-  void draw() => print('Painted in $color');
+  void draw() => print('Painted in ${color ?? "Unknown"}'); // Handling null with the null-aware operator ?? 
   double get area; // This method is not defined yet here
 }
 
 class Circle extends Shape {
   double _radius;
 
-  Circle(this._radius, String color) : super(color);
+  Circle(this._radius, {String? color}) : super(color ?? 'White'); // Handling null with the null-aware operator ??
   double get radius => _radius;
   set radius(double value) => _radius = value;
 
@@ -20,14 +20,14 @@ class Circle extends Shape {
 }
 
 class Rectangle extends Shape {
-  double width, height;
+  double? width, height; // Making width and height nullable
 
-  Rectangle({this.width, this.height, String color}) : super(color);
+  Rectangle({this.width, this.height, String? color}) : super(color ?? 'White'); // Handling null with the null-aware operator ??
   Rectangle.square(double size)
-      : this(width: size, height: size, color: 'White');
+      : width = size, height = size, super('White'); // Providing default value for color
 
   @override
-  double get area => width * height;
+  double get area => width! * height!; // Accessing width and height with null assertion operator
 
   @override
   void draw() {
@@ -37,7 +37,7 @@ class Rectangle extends Shape {
 }
 
 void main() {
-  var c = Circle(20, 'Yellow');
+  var c = Circle(20, color: 'Yellow');
   var r = Rectangle(height: 2, color: 'Green', width: 5);
   var s = Rectangle.square(3);
 
@@ -59,8 +59,6 @@ void main() {
   print('');
 
   var square = Rectangle.square(20);
-  square.color='Yellow';
+  square.color = 'Yellow';
   square.draw();
-
 }
-

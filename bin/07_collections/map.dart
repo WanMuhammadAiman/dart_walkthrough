@@ -10,7 +10,7 @@ void main() {
   var firstWord  = 'three', secondWord = 'seven';
   var firstNumber = wordNumbers[firstWord];
   var secondNumber = wordNumbers[secondWord];
-  var result = firstNumber + secondNumber;
+  var result = firstNumber! + secondNumber!; // Ensuring that firstNumber and secondNumber are integers
 
   print('$firstWord plus $secondWord is ${numberWords[result]}');
 }
